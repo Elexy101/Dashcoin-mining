@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Dashcoin - Free crypto coin trade php script</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/form.css" rel="stylesheet">
+	<link href="css/sticky-footer.css" rel="stylesheet">
+	<link href="webfont/cryptocoins.css" rel="stylesheet">
+  </head>
+
+<body class="text-center" background="img/bg6.png" onload="countdown()">
+
+               <form method = "post" action = "<?php $_PHP_SELF ?>" id = "report">
+
+      <script type="text/javascript">
+      	var ss = 10000;
+      	add = 0;
+      	function countdown(){
+		 ss = ss - 1;
+		 add = add + 0.05;
+		 if(ss<0){
+		 	window.location = "mining.php";
+		 }else{
+		 	document.getElementById("countdown").innerHTML = ss;
+		 	document.getElementById("add").innerHTML = add
+		 	document.getElementById("hack1").innerHTML = '<input type="submit" class="btn btn-success btn-lg" style="border-radius: 2em" value="Stop mining" disabled/>'
+		 	window.setTimeout("countdown()", 1000);
+		 }
+		}
+      </script>
+       <h2 id="countdown" style="color: white"></h2>
+	  <img class="mb-4" src="img/favicon.png" alt=""  width="150" height="150">
+	  <br>	<b><input type="submit" id="hack1" class="btn btn-success btn-lg" style="border-radius: 2em" value="Start mining"/></b>
+	</form>
+	
+	<footer class="footer">
+      <div class="container">
+        <span class="text-muted">
+  
+<strong><font color='black' id = 'add'></font></strong>
+        
+			<a href="https://github.com/thatsailorman/CryptXchange" target="_blank"><button class='btn btn-lg'>Download <b>CryptXchange</b> script at <img src='img/github.png' width="22px" height="22px"></button></a>
+      </span></div>
+    </footer> 
+      
+    	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
